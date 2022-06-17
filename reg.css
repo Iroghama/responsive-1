@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    font-size: 15px;
+    font-size: 15px;
+    color:white ;
+    line-height: 1.6;
+}
+@font-face {
+    font-family: regular;
+    src: url(Poppins-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: pop;
+    src: url(Poppins-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: semi;
+    src: url(Poppins-SemiBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: pmedium;
+    src: url(Poppins-Medium.ttf) format('truetype');
+}
+.container{
+    width: 100%;/*this was initially commented*/
+    height: 100vh;/*this was 80%*/
+    display: flex;
+    background:hsl(0, 100%, 74%) url(bg-intro-desktop.png) no-repeat;
+    background-size: cover;
+    
+   /* margin: 10vh 10vw;*/
+    gap: 35px;
+    padding: 50px ;
+    align-items: center;
+    justify-content: center;/*formerly not here*/
+    font-family: regular;
+
+   
+}
+.container .words{
+    width: 40%;/*formerly 45%*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+height: 100%;
+padding: 25px 0px 25px 25px;
+}
+.container .words h1{
+    font-family: pop;
+    margin-bottom: 20px;
+    width:70%
+}
+.container .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;/*formerly 55*/
+    padding: 10px 20px;/*after resolving svg resolve the margin below inpput fields to matcg the design*/
+}
+.container .form .top{
+    margin-bottom: 30px;
+background-color: hsl(248, 32%, 49%);    
+padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: medium;
+    box-shadow: 0px 7px  rgba(0, 0, 0,0.2);
+    
+}
+.container .form .top span{
+    font-family: pop;
+
+}
+.container .form form{
+    display: grid;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    gap: 5px;
+    grid-template-columns: 100%;
+    justify-content: space-between;
+    box-shadow: 0px 7px rgba(0, 0, 0,0.2);
+
+
+}
+ 
+.container .form form input{
+    padding: 10px 30px;
+    border-radius: 5px;
+    border:1px solid hsl(246, 25%, 77%);
+    font-family: semi;
+    width: 100%;
+}
+.container .form form input:valid{
+    color:hsl(249, 10%, 26%) ;
+    
+}
+.container .form form input:focus{
+    outline:1px solid hsl(249, 10%, 26%) ;
+    border: none;
+    color:hsl(249, 10%, 26%) ;
+}
+.sv{
+
+    position: relative;
+}
+.sv svg{
+position: absolute;
+right: 20px;
+top: 10px;
+visibility: hidden;
+}
+form .btn{
+    margin-top: 10px;
+    font-family:semi ;
+    background-color:hsl(154, 59%, 51%) ;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+form p{
+    font-family: medium;
+    color:  hsl(246, 25%, 77%);
+    text-align: center;
+}
+form p #red{
+    color:  hsl(0, 100%, 74%);
+}
+/*active states*/
+.btn:hover{
+    background-color:rgb(56, 204, 140,0.7) ;
+    cursor: pointer;
+
+}
+.btn:focus{
+    background-color:rgb(56, 204, 140,0.7) ;
+outline: none;
+}
+ /*input:required:invalid,input:empty{
+    background-image: url(icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: content-box;
+}*/
+
+
+@media (max-width:768px){
+    .container{
+        font-size: 17px;
+        flex-direction:column;
+        height:100%;
+        width:100%;
+        align-items: center;
+        margin: auto;
+        padding:50px  10px 30px 10px;
+        gap: 10px;
+        background-image: url(bg-intro-desktop.png);
+        
+    }
+    .container .words{
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        padding: 5px;
+    }
+    .container .words h1{
+        width: inherit;
+    }
+    .container .form{
+        width:100%;
+        padding: 10px 5px 30px 5px;
+        margin-top: 10px;
+    }
+    
+}
