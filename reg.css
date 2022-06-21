@@ -35,7 +35,6 @@ body{
     background-size: cover;
    /* margin: 10vh 10vw;*/
     gap: 35px;
-    padding: 50px ;
     align-items: center;
     justify-content: center;/*formerly not here*/
     font-family: regular;
@@ -186,8 +185,6 @@ outline: none;
         height:100%;
         width:100%;
         align-items: center;
-        margin: auto;
-        padding:50px  10px 30px 10px;
         gap: 10px;
         background-image: url(bg-intro-desktop.png);
         
