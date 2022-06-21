@@ -29,11 +29,10 @@ body{
 }
 .container{
     width: 100%;/*this was initially commented*/
-    height: 100vh;/*this was 80%*/
+    min-height: 100vh;/*this was 80%*/
     display: flex;
     background:hsl(0, 100%, 74%) url(bg-intro-desktop.png) no-repeat;
     background-size: cover;
-    
    /* margin: 10vh 10vw;*/
     gap: 35px;
     padding: 50px ;
@@ -57,6 +56,7 @@ padding: 25px 0px 25px 25px;
     width:70%
 }
 .container .form {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,12 +64,12 @@ padding: 25px 0px 25px 25px;
     padding: 10px 20px;/*after resolving svg resolve the margin below inpput fields to matcg the design*/
 }
 .container .form .top{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 background-color: hsl(248, 32%, 49%);    
-padding: 10px;
+padding: 15px;
     border-radius: 5px;
     text-align: center;
-    font-family: medium;
+    font-family: regular;
     box-shadow: 0px 7px  rgba(0, 0, 0,0.2);
     
 }
@@ -79,57 +79,82 @@ padding: 10px;
 }
 .container .form form{
     display: grid;
+    height:100%;
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px;
-    gap: 5px;
     grid-template-columns: 100%;
     justify-content: space-between;
     box-shadow: 0px 7px rgba(0, 0, 0,0.2);
-
-
 }
  
-.container .form form input{
-    padding: 10px 30px;
+
+.input-group{
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.input-group input{
+    padding: 15px 30px;
     border-radius: 5px;
     border:1px solid hsl(246, 25%, 77%);
     font-family: semi;
     width: 100%;
 }
-.container .form form input:valid{
+.error input{
+    border:2px solid hsl(0, 100%, 74%) ;
+    color: hsl(0, 100%, 74%);
+}
+.empty input::placeholder{
+    opacity: 0;
+}
+.sucess input{
+    border:1px solid hsl(246, 25%, 77%);
+
+}
+
+.input-group input:valid{
     color:hsl(249, 10%, 26%) ;
     
 }
-.container .form form input:focus{
-    outline:1px solid hsl(249, 10%, 26%) ;
+.input-group input:focus{
+    outline:2px solid hsl(249, 10%, 26%) ;
     border: none;
     color:hsl(249, 10%, 26%) ;
 }
-.sv{
+.input-group span{
+    color: hsl(0, 100%, 74%);
+    font-style: italic;
+   display: flex;
+   justify-content: end;
+   font-family: pmedium;
+    font-size: 12px;
 
-    position: relative;
 }
-.sv svg{
-position: absolute;
-right: 20px;
-top: 10px;
-visibility: hidden;
-}
+.input-group svg{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    visibility: hidden;
+    }
+
+
 form .btn{
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     font-family:semi ;
     background-color:hsl(154, 59%, 51%) ;
-    padding: 10px;
+    padding: 14px;
     color: white;
     border: none;
-    border-radius: 3px;
-    margin-bottom: 10px;
+    border-radius: 5px;
 }
 form p{
-    font-family: medium;
+    
+    font-family: pmedium;
     color:  hsl(246, 25%, 77%);
     text-align: center;
+    font-size: 10px;
 }
 form p #red{
     color:  hsl(0, 100%, 74%);
@@ -144,6 +169,8 @@ form p #red{
     background-color:rgb(56, 204, 140,0.7) ;
 outline: none;
 }
+
+
  /*input:required:invalid,input:empty{
     background-image: url(icon-error.svg);
     background-repeat: no-repeat;
@@ -179,5 +206,7 @@ outline: none;
         padding: 10px 5px 30px 5px;
         margin-top: 10px;
     }
-    
+    form p{
+        font-size: 13px;;
+    }
 }
