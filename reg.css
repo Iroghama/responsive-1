@@ -203,6 +203,9 @@ outline: none;
         padding: 10px 5px 30px 5px;
         margin-top: 10px;
     }
+    form{
+        height: auto;
+    }
     form p{
         font-size: 13px;;
     }
